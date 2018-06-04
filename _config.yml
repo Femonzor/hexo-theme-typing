@@ -1,5 +1,5 @@
 # Lang
-language: en
+language: zh-CN
 
 # Dark Mode
 dark: false
@@ -8,7 +8,7 @@ dark: false
 menu:
   Home: /
   Archives: /archives
-  About: /about
+  # About: /about
 
 # Your Feed Location
 #rss: /atom.xml
@@ -16,10 +16,10 @@ menu:
 # Content
 fancybox: true
 
-
 # Miscellaneous
 google_analytics:
-favicon: /favicon.ico
+favicon: /favicons/favicon.ico
+logo: /images/logo.jpg
 twitter:
 google_plus:
 fb_admins:
@@ -27,8 +27,9 @@ fb_app_id:
 
 
 # Profile
-nickname: NickName
-description: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae [libero pharetra](http://hexo.io) adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam.
+nickname: Femonzor
+description: Trying hard to be a good developer. Life is coding, gaming, movie. More about me is to be continued...
+# description: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae [libero pharetra](http://hexo.io) adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam.
 
 # Load fontawesome icons? Also see the links option
 icons: false
@@ -38,17 +39,17 @@ icons: false
 # If "icons: true" link names will interpreted as fontawesome icon names
 # NOTICE) Use the fontawesome icon names without the fa- prefix (http://fontawesome.io/cheatsheet/)
 links:
-  book: /archives/
-  globe: https://github.com/geekplux/hexo-theme-typing
-  twitter: https://twitter.com/
-  github-alt: https://github.com/
-  youtube-play: https://www.youtube.com/
-  stack-overflow: https://stackoverflow.com/
-  google-plus: https://plus.google.com/
-  rss: /atom.xml
+  Blog: /archives/
+  # globe: https://github.com/geekplux/hexo-theme-typing
+  # twitter: https://twitter.com/
+  # github-alt: https://github.com/
+  # youtube-play: https://www.youtube.com/
+  # stack-overflow: https://stackoverflow.com/
+  # google-plus: https://plus.google.com/
+  # rss: /atom.xml
 
 # nav position (top, left. top is default)
-nav: left
+nav: top
 
 # Info
 archive_footer_content: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Archive

@@ -19,6 +19,7 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
+      <% if (config.donate) { %>
       <div id="donate" class="donate">
         <a id="github" href="<%= theme.donate.github %>" target="_blank" class="pos-f tr3" title="Github"></a>
 	      <div id="DonateText" class="tr3">Donate</div>
@@ -37,6 +38,7 @@
 	      <input id="btc-key" type="text" value="<%= theme.donate.bitcoin %>" readonly="readonly">
       </div>
     </div>
+    <% } %>
     <footer class="article-footer">
       <ul class="article-meta">
         <li>

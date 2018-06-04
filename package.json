@@ -4,7 +4,8 @@
   "version": "1.5.1",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "postcss": "postcss --use postcss-import --use precss --use autoprefixer --use cssnano source/css/source.css --output source/css/typing.css"
   },
   "keywords": [
     "hexo",
@@ -12,9 +13,8 @@
     "typing"
   ],
   "author": {
-    "name": "geekplux",
-    "email": "geekplux@gmail.com",
-    "url": "github.com/geekplux"
+    "name": "Femonzor",
+    "url": "https://github.com/Femonzor"
   },
   "license": "MIT",
   "dependencies": {
