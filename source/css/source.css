@@ -488,6 +488,7 @@ blockquote {
       margin-right: 10px;
     }
     .article-tag-list, .article-category {
+      margin-left: 0;
       display: inline-block;
     }
     .article-tag-list-item {
