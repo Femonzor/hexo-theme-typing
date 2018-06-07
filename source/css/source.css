@@ -643,9 +643,9 @@ $dark-white-light: #fff;
 
 
 /* code highlight */
-$code-background: #f3f5f6;
+$code-background: #fbfbfb;
 $code-font-size: 14px;
-$code-line-height: 1.8;
+$code-line-height: 1.6;
 
 
 $highlight-background: #ffffff;
@@ -664,7 +664,6 @@ $highlight-purple: #8959a8;
 
 
 @define-extend code-block {
-  padding: 20px;
   background: $code-background;
   color: $highlight-foreground;
   font-size: $code-font-size;
