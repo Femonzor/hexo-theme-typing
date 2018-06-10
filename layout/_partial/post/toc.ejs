@@ -1,0 +1,13 @@
+<% if (config.toc) {
+    var topic = toc(post.content, {
+        class: 'post-toc',
+        list_number: theme.toc.list_number
+    })
+    if(topic) {
+%>
+<aside class="article-toc" id="article-toc">
+    <h4><%= __('toc') %></h4>
+    <%- topic %>
+</aside>
+<% }
+} %>

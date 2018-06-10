@@ -314,6 +314,7 @@ blockquote {
 
 
 .article {
+  position: relative;
   width: $content-width;
   max-width: $content-max-width;
 
@@ -323,6 +324,29 @@ blockquote {
   .header {
     font-size: 18px;
     padding-top: 50px;
+  }
+
+  .blank:before {
+    position: fixed;
+    top: 0;
+    width: 220px;
+    height: 110px;
+    margin-left: -230px;
+    content: "";
+    z-index: 100;
+    background: #fff;
+  }
+
+  .article-toc {
+    position: absolute;
+    width: 220px;
+    margin-left: -230px;
+    padding-top: 110px;
+    font-size: 16px;
+
+    .post-toc-child {
+      padding-left: 10px;
+    }
   }
 
   .main-nav-link:hover {
@@ -783,6 +807,11 @@ pre {
 
 
 /* tablet */
+@media (max-width: 1280px) {
+  .article {
+    margin-left: 290px;
+  }
+}
 
 @media (max-width: 768px) {
   body {
@@ -804,6 +833,10 @@ pre {
   }
   .article {
     width: $mobile-content-width;
+    margin: 0 auto;
+  }
+  .article-toc {
+    display: none;
   }
   .article-title {
     font-size: 2rem;
@@ -903,3 +936,18 @@ pre {
     font-size: 100%;
   }
 }
+
+/* common */
+.abs {
+  position: absolute!important;
+}
+.fix {
+  position: fixed!important;
+}
+.t0 {
+  top: 0;
+}
+.oh {
+  overflow: hidden;
+}
+/* common end */

@@ -1,4 +1,4 @@
-(function ($) {
+(function ($, document) {
   // Caption
   $('.article-entry').each(function (i) {
     $(this).find('img').each(function () {
@@ -24,41 +24,43 @@
 
 
   $(document).ready(function() {
-	  var QRBox	=	$('#QRBox');
-	  var MainBox	=	$('.MainBox');
-	  var BTCQR	=	$('#BTCQR');
-	  var AliPayQR	=	$('#AliPayQR');
-	  var WeChatQR	=	$('#WeChatQR');
+    var QRBox = $('#QRBox');
+    var MainBox = $('.MainBox');
+    var BTCQR = $('#BTCQR');
+    var AliPayQR = $('#AliPayQR');
+    var WeChatQR = $('#WeChatQR');
     var currentQR;
+    var $aritcleToc = $("#article-toc");
+    var articleTocOffsetTop = $aritcleToc.offset().top;
 
-	  function showQR(QR) {
-		  $('#DonateText,#donateBox,#github').addClass('blur');
+    function showQR(QR) {
+      $('#DonateText,#donateBox,#github').addClass('blur');
       currentQR = QR;
-		  QRBox.fadeIn(300,function(argument) {
-			  QR.addClass('showQR');
-		  });
-	  }
+      QRBox.fadeIn(300,function(argument) {
+        QR.addClass('showQR');
+      });
+    }
 
-	  $('#donateBox>li').click(function(event) {
-		  var thisID	=	$(this).attr('id');
-		  if (thisID === 'BTC') {
-			  showQR(BTCQR);
-			  new Clipboard('#BTCBn');
-		  } else if (thisID === 'AliPay') {
-			  showQR(AliPayQR);
-		  } else if (thisID === 'WeChat') {
-			  showQR(WeChatQR);
-		  }
-	  });
+    $('#donateBox>li').click(function(event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'BTC') {
+        showQR(BTCQR);
+        new Clipboard('#BTCBn');
+      } else if (thisID === 'AliPay') {
+        showQR(AliPayQR);
+      } else if (thisID === 'WeChat') {
+        showQR(WeChatQR);
+      }
+    });
 
-	  MainBox.click(function(event) {
-		  if (currentQR) currentQR.removeClass('showQR').addClass('hideQR');
-		  setTimeout (function(a) {
-			  QRBox.fadeOut(300,function(argument) {
-				  MainBox.removeClass('hideQR');
-			  });
-			  $('#DonateText,#donateBox,#github').removeClass('blur');
-		  },600);
+    MainBox.click(function(event) {
+      if (currentQR) currentQR.removeClass('showQR').addClass('hideQR');
+      setTimeout (function(a) {
+        QRBox.fadeOut(300,function(argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#DonateText,#donateBox,#github').removeClass('blur');
+      },600);
     });
 
     $('#menu').click(function (event) {
@@ -74,5 +76,12 @@
         $('#main-nav').hide('fast');
       }
     });
+    $(window).on("scroll", function () {
+      if (document.body.scrollTop > articleTocOffsetTop) {
+        $aritcleToc.addClass("fix t0");
+      } else {
+        $aritcleToc.removeClass("fix t0");
+      }
+    });
   });
-})(jQuery)
+})(jQuery, document);
