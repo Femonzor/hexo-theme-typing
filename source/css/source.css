@@ -31,6 +31,7 @@ $mobile-content-width: 80%;
   color: $grey-bold;
   padding-bottom: 5px;
   display: inline-block;
+  line-height: 1.8;
   border: 0;
 }
 
@@ -42,6 +43,23 @@ body {
   position: relative;
   box-sizing: border-box;
   color: $black-light;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -243,7 +261,6 @@ blockquote {
   line-height: 1;
   text-align: left;
   font-size: 18px;
-  padding-top: 50px;
   max-width: $content-max-width;
 
   article {
@@ -259,6 +276,7 @@ blockquote {
 
   .header {
     font-size: 18px;
+    padding-top: 50px;
   }
 
   .archive-article-header {
@@ -592,6 +610,7 @@ $dark-white-light: #fff;
   .tag-container,
   .article {
     .header {
+      padding-top: 50px;
       .main-nav-link {
         color: $dark-grey;
       }
