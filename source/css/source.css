@@ -341,7 +341,6 @@ blockquote {
     position: absolute;
     width: 220px;
     margin-left: -230px;
-    padding-top: 110px;
     font-size: 16px;
 
     .post-toc-child {
@@ -946,6 +945,12 @@ pre {
 }
 .t0 {
   top: 0;
+}
+.t150p {
+  top: 150px;
+}
+.t260p {
+  top: 260px;
 }
 .oh {
   overflow: hidden;
