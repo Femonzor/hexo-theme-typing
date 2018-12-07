@@ -85,7 +85,9 @@
       }
     });
     $(window).load(function () {
-      $("pre").addClass("prettyprint linenums").attr("style", "overflow:auto;");
+      // $("pre").addClass("prettyprint linenums").attr("style", "overflow:auto;");
+      // 不显示行号似乎效果更好
+      $("pre").addClass("prettyprint").attr("style", "overflow:auto;");
       prettyPrint();
     });
   });

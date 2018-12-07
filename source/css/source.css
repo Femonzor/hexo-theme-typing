@@ -722,11 +722,20 @@ $highlight-purple: #8959a8;
   figure.highlight {
     margin: 0;
   }
+  code {
+    padding: .1em .3em .1em;
+    font-family: inherit;
+    background: #fbfbfb;
+    border: 1px solid #e5e8ec;
+    border-radius: .25em;
+  }
   pre {
     @extend code-block;
     code {
       background: none;
       text-shadow: none;
+      border: none;
+      border-radius: 0;
       padding: 0;
     }
   }
